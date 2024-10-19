@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Währungsrechner</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Währungsrechner</h1>
+    
+        <!-- Erstes Label: Anzahl und Währung -->
+        <label id="conversion-label"></label>
+
+        <!-- Zweites Label: Konvertierter Betrag und Zielwährung (größere Schriftgröße) -->
+        <label id="result-label"></label>
+    
+        <!-- Benutzeroberfläche für die Währungsumrechnung -->
+        <div class="converter">
+            <input type="number" id="amount-input" step="0.01"> <!-- Eingabefeld für den Betrag -->
+            
+            <select id="currency-from"></select> <!-- Dropdown für die Ausgangswährung -->
+            
+            <input type="number" id="converted-amount-input" step="0.01"> <!-- Eingabefeld für den umgerechneten Betrag -->
+    
+            <select id="currency-to"></select> <!-- Dropdown für die Zielwährung -->
+        </div>
+    
+        <!-- Anzeige der letzten Aktualisierung -->
+        <p id="updated-at">Letzte Aktualisierung: <span id="last-update"></span></p>
+    </div>
+    
+    
+      
+    
+
+    <script type="module">
+        import { initializeCurrencyConverter } from './controller.js';
+        document.addEventListener('DOMContentLoaded', initializeCurrencyConverter);
+    </script>
+</body>
+</html>
