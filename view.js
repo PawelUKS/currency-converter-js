@@ -61,6 +61,30 @@ export function formatDate(dateString) {
     return `${day}.${month}.${year} ${hour}:${minute}:${second}`;
 }
 
+// Funktion zum Füllen der Dropdowns mit den Währungsdaten
+export function fillCurrencyDropdowns(data) {
+    const currencyFromSelect = document.getElementById('currency-from');
+    const currencyToSelect = document.getElementById('currency-to');
+
+    // Leere die Dropdowns, bevor neue Optionen hinzugefügt werden
+    currencyFromSelect.innerHTML = '';
+    currencyToSelect.innerHTML = '';
+
+    // Füge die Optionen für beide Dropdowns hinzu
+    Object.values(data).forEach(currency => {
+        const optionFrom = document.createElement('option');
+        optionFrom.value = currency.code;
+        optionFrom.text = currency.name;
+
+        const optionTo = document.createElement('option');
+        optionTo.value = currency.code;
+        optionTo.text = currency.name;
+
+        currencyFromSelect.appendChild(optionFrom);
+        currencyToSelect.appendChild(optionTo);
+    });
+}
+
 // Funktion zum Aktualisieren des Datums der letzten Aktualisierung
 export function updateLastUpdateDate(date) {
     const formattedDate = formatDate(date); // Formatierung aufrufen

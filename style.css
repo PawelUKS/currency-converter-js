@@ -15,14 +15,30 @@ body {
     background-color: #44475a;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 600px; /* Breite des Containers auf 400px setzen */
+    max-height: 350px;
+    height: 100%;
     width: 100%;
 }
 
 h1 {
     color: #50fa7b;
-    font-size: 1.5em;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#conversion-label {
+    font-size: 1.2em; /* Normale Schriftgröße */
+    display: block;
     margin-bottom: 10px;
+}
+
+#result-label {
+    font-size: 2.0em; /* Größere Schriftgröße */
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 #result p {
@@ -31,42 +47,43 @@ h1 {
     margin-top: 0;
 }
 
-/* Spezifität erhöht, damit es nicht überschrieben wird */
-.container .converter-row {
-    display: flex !important; /* Wichtige Flexbox-Anordnung */
-    justify-content: space-between !important; /* Abstand zwischen den Feldern */
-    gap: 20px !important; /* Abstand zwischen Input und Select in einer Zeile */
-    margin-bottom: 20px !important; /* Abstand zwischen den Zeilen */
+.converter-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Abstand zwischen Input und Select */
+    margin-bottom: 10px; /* Abstand zwischen den Zeilen */
 }
 
-.container .converter input {
-    width: 45% !important; /* Breite des Input-Felds */
-    padding: 10px !important;
-    font-size: 1.2em !important;
-    border: 2px solid #6272a4 !important;
-    border-radius: 5px !important;
-    background-color: #44475a !important;
-    color: #f8f8f2 !important;
+.converter input {
+    width: 25%; /* Kleinere Breite für Input-Feld */
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #6272a4;
+    border-radius: 5px;
+    background-color: #44475a;
+    color: #f8f8f2;
+    text-align: left;
+
 }
 
-.container .converter select {
-    width: 45% !important; /* Breite des Select-Felds */
-    padding: 10px !important;
-    font-size: 1.2em !important;
-    border: 2px solid #6272a4 !important;
-    border-radius: 5px !important;
-    background-color: #44475a !important;
-    color: #f8f8f2 !important;
+.converter select {
+    width: 55%; /* Mehr Platz für die Select-Box */
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #6272a4;
+    border-radius: 5px;
+    background-color: #44475a;
+    color: #f8f8f2;
 }
 
-.container .converter input:focus, 
-.container .converter select:focus {
-    outline: none !important;
-    border-color: #50fa7b !important;
+.converter input:focus, .converter select:focus {
+    outline: none;
+    border-color: #50fa7b;
 }
 
 #updated-at {
     color: #50fa7b;
     margin-top: 20px;
     font-size: 0.9em;
+    text-align: center;
 }

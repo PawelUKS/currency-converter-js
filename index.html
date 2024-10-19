@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Währungsrechner</h1>
-    
+        
         <!-- Erstes Label: Anzahl und Währung -->
         <label id="conversion-label"></label>
 
@@ -27,15 +27,11 @@
     
             <select id="currency-to"></select> <!-- Dropdown für die Zielwährung -->
         </div>
-    
+
         <!-- Anzeige der letzten Aktualisierung -->
         <p id="updated-at">Letzte Aktualisierung: <span id="last-update"></span></p>
     </div>
     
-    
-      
-    
-
     <script type="module">
         import { initializeCurrencyConverter } from './controller.js';
         document.addEventListener('DOMContentLoaded', initializeCurrencyConverter);
